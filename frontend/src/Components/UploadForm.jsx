@@ -1,6 +1,6 @@
 import { useState } from "react";
 import conf from "../conf/conf";
-
+import axios from "axios";
 const UploadForm = ({ onUploadSuccess }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -20,7 +20,7 @@ const UploadForm = ({ onUploadSuccess }) => {
     }
 
     try {
-      const response = await fetch(conf.bkurl+'/models', fromData);
+      const response = await axios.post(conf.bkurl+'/models', fromData);
       console.log(response);
       if (!response.ok) throw new Error("Failed to upload model");
 
