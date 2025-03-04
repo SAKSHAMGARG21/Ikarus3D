@@ -51,7 +51,6 @@ const Home = () => {
     };
     fetchModels();
   }, []);
-
   return (
     <div className="p-8 flex flex-col items-center min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white pt-24">
       {/* Background mesh effect */}
@@ -80,7 +79,7 @@ const Home = () => {
           transition={{ duration: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl relative z-10"
         >
-          {dbModels.map((model, index) => (
+          {dbModels?.map((model, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
