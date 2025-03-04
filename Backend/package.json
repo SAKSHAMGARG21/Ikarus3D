@@ -1,5 +1,5 @@
 {
-  "name": "Ed4u",
+  "name": "Backend",
   "version": "1.0.0",
   "description": "To start this project :\r npm i\r nodemon src/index.js",
   "type": "module",

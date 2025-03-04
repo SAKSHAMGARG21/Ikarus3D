@@ -3,6 +3,7 @@ import ModelViewer from "../Components/ModelViewer";
 import { motion } from "framer-motion";
 import axios from "axios";
 
+import conf from "../conf/conf";
 // Loading Spinner Component
 const Loader = () => (
   <div className="flex justify-center items-center h-40">
@@ -39,7 +40,7 @@ const Home = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/v1/models");
+        const response = await axios.get(conf.bkurl+"/models",);
         console.log(response);
         setDbModels(response.data.data);
       } catch (error) {
