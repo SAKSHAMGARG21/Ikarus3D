@@ -15,11 +15,11 @@ const ModelViewer = ({ modelUrl, localModel }) => {
   }, [scene]);
 
   return (
-    <div className="w-full h-[500px] rounded-lg border border-gray-300 bg-gradient-to-r from-gray-200 to-gray-300 shadow-lg flex items-center justify-center">
+    <div className="w-full h-[400px] rounded-lg border border-gray-300 bg-gradient-to-r from-gray-200 to-gray-300 shadow-lg flex items-center justify-center">
       {loading ? (
         <div className="text-gray-500">Loading model...</div>
       ) : (
-        <Canvas camera={{ position: [0, 3, 7], fov: 50 }}>
+        <Canvas camera={{ position: [0, 3, 7], fov: 50 }} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           {/* Enhanced Lighting */}
           <ambientLight intensity={0.7} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
@@ -29,7 +29,7 @@ const ModelViewer = ({ modelUrl, localModel }) => {
           <OrbitControls enableDamping={true} dampingFactor={0.1} />
 
           {/* Render 3D Model */}
-          <primitive object={scene} />
+        <primitive object={scene} position={[0, 0, 0]} />
         </Canvas>
       )}
     </div>

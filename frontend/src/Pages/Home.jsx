@@ -101,7 +101,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-blue-500 opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-5 rounded-xl"></div>
 
               <h2 className="text-2xl font-bold mb-5 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                {model.name}
+                {model.title}
               </h2>
 
               <div className="w-full h-64 rounded-lg overflow-hidden bg-gray-900 border border-gray-700 shadow-inner">
