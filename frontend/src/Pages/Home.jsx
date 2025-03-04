@@ -40,7 +40,7 @@ const Home = () => {
   useEffect(() => {
     const fetchModels = async () => {
       try {
-        const response = await axios.get(conf.bkurl+"/models",);
+        const response = await axios.get(conf.bkurl+"/models");
         console.log(response);
         setDbModels(response.data.data);
       } catch (error) {
